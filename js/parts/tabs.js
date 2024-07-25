@@ -5,8 +5,8 @@ function tabs() {
 
     let tab = document.querySelectorAll(".info-header-tab"), // Получаем все табы-кнопки
         info = document.querySelector(".info-header"), //Получаем родителя с табами-кнопками
-        tabContent = document.querySelectorAll(".info-tabcontent"), //Получаем весь таб-контент
-        btntab = document.querySelectorAll(".description-btn");
+        tabContent = document.querySelectorAll(".info-tabcontent"); //Получаем весь таб-контент
+
 
 
     // Цикл, который проходит по табам с индексом от 1 до 4 и меняет классы.
@@ -14,11 +14,10 @@ function tabs() {
         for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove("show");
             tabContent[i].classList.add("hide");
-            //btntab[i].addEventListener("click", modalWindow);  // активируем кнопку на открытие модального окна
+
         }
     }
     hideTabContent(1); // Передаем 1, чтоб таб с индексом 0 отображался на странице
-    //btntab[0].addEventListener("click", modalWindow); // Активируем кнопку с модальным окном на 0 табе
 
     // Передаем индекс таба, чтоб сменить класс
     function showTabContent(b) {
